@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Tailwind CSS</title>
     <link href="dist/output.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <!-- Header Start -->
@@ -25,20 +26,35 @@
                     <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
                         <ul class="block lg:flex">
                             <li class="group">
-                                <a href="#home" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Home</a>
+                                <a href="#home" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Home</a>
                             </li>
                             <li class="group">
-                                <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">About</a>
+                                <a href="#about" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">About</a>
                             </li>
                             <li class="group">
-                                <a href="#portfolio" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Portfolio</a>
+                                <a href="#portfolio" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Portfolio</a>
                             </li>
                             <li class="group">
-                                <a href="#blog" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Blog</a>
+                                <a href="#timeline" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Experiences</a>
                             </li>
                             <li class="group">
-                                <a href="#contact" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Contact</a>
+                                <a href="#achievements" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Achievements</a>
                             </li>
+                            <li class="group">
+                                <a href="https://medium.com/@yohanasrirejeki" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary dark:text-white">Blog</a>
+                            </li>
+                            <!-- <li class="flex items-center pl-8">
+                                <div class="flex">
+                                    <span class="mr-2 text-sm text-slate-500">☀️</span>
+                                    <input type="checkbox" class="hidden" id="dark-toggle" />
+                                    <label for="dark-toggle">
+                                        <div class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                                            <div class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-300 ease-in-out"></div>
+                                        </div>
+                                    </label>
+                                    <span class="ml-2 text-sm text-slate-500">🌜</span>
+                                </div>
+                            </li> -->
                         </ul>
                     </nav>
                 </div>
@@ -48,7 +64,7 @@
     <!-- Header End -->
 
     <!-- Hero Section Start -->
-    <section id="home" class="pt-36">
+    <section id="home" class="pt-36 dark:bg-dark">
         <div class="container">
             <div class="flex flex-wrap"> 
                 <div class="w-full self-center px-4 lg:w-1/2"> 
@@ -56,17 +72,17 @@
                     <h2 class="font-medium text-secondary text-lg mb-5 lg:text-2xl">Game Composer, Machine Learning and Data Enthusiast, <span class="text-dark">Lifetime Learner</span></h2>
                     <p class="font-medium text-slate-400 mb-10 leading-relaxed"><mark class="bg-gradient-to-r from-blue-200 to-yellow-100 inline decoration-clone">"Do everything with all of your heart, because you're not always given a second chance. If there's an opportunity that comes to you, take it and do your best. Opportunity seldom knocks twice."</mark></p>
 
-                    <a href="#" class="text-base font-semibold text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">Contact Me</a>
+                    <a href="mailto: maria.yohanasrirejeki@gmail.com" class="text-base font-semibold text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">Contact Me</a>
 
-                    <a href="#" class="text-base font-semibold text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">CV</a>
+                    <!-- <a href="#" class="text-base font-semibold text-white bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 py-3 px-8 rounded-full hover:shadow-lg hover:opacity-80 transition duration-300 ease-in-out">CV</a> -->
                 </div>
                 <div class="w-full self-end px-4 lg:w-1/2">
                     <div class="relative mt-10 lg:mt-9 lg:right-0">
                         <img src="dist/img/portfolio/yohana2.png" alt="Yohana Sri Rejeki" class="max-w-full mx-auto grayscale hover:grayscale-0 transition duration-300" width="500" height="500"/>
                         <span class="absolute -bottom-0 -z-10 left-1/2 -translate-x-1/2 md:scale-150 ">
-                            <div class="absolute -top-96 -left-4 w-48 h-48 bg-purple-200 rounded-full filter blur-xl"></div>
-                            <div class="absolute -top-0 -left-4 w-72 h-72 bg-purple-300 rounded-full filter blur-xl"></div>
-                            <div class="absolute -top-40 -right-1 w-48 h-48 bg-pink-300 rounded-full filter blur-xl"></div>
+                            <div class="absolute -top-96 -left-4 w-48 h-48 bg-purple-200 rounded-full filter blur-xl md:absolute -top-96 -left-4 w-25 h-25 bg-purple-200 rounded-full filter blur-xl"></div>
+                            <div class="absolute -top-0 -left-10 w-72 h-72 bg-purple-300 rounded-full filter blur-xl md:absolute -top-0 -left-15 w-20 h-20 bg-purple-300 rounded-full filter blur-xl"></div>
+                            <div class="absolute -top-40 -right-1 w-48 h-48 bg-pink-300 rounded-full filter blur-xl md:absolute -top-40 -right-1 w-48 h-48 bg-pink-300 rounded-full filter blur-xl "></div>
                         </span>
                     </div>
                 </div>
@@ -76,18 +92,24 @@
     <!-- Hero Section End -->
 
     <!-- About Section Start -->
-    <section id="about" class="pt-36 pb-32">
+    <section id="about" class="pt-36 pb-20">
         <div class="container">
             <div class="flex flex-wrap">
                 <div class="w-full px-4 mb-10 lg:w-1/2">
                     <h4 class="font-bold uppercase text-primary text-lg mb-3">About Me</h4>
                     <h2 class="font-bold text-dark text-3xl mb-5 max-w-md lg:text-4xl">Let's learn together about technology!</h2>
-                    <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">Game Composer with over 9 months experience at one of the game studios in Indonesia. Using FL Studio, MuseScore, and VST, I created soundtracks, music levels, cut scenes, and sound effects for 4 games developed in the studio. The music which I produced for the team inside the studio became the 1st game prototype winner at a company that collaborate with Kampus Merdeka. In the national game hackathon, a game from the studio became the 2nd winner. Besides making game music, I enjoyed composing instrumental music with the strings element.<br>
-                    I am an undergraduate student focused on Informatics Engineering from Universitas Komputer Indonesia. I am passionate write codes using Java, Dart, MySQL, and Python. I love learning everything about software engineering.</p>
+                    <p class="font-medium text-base text-secondary max-w-xl lg:text-lg">Game Composer with over 9 months experience at one of the game studios in Indonesia. Using FL Studio, MuseScore, and VST, I created soundtracks, music levels, cut scenes, and sound effects for 4 games developed in the studio. The music which I produced for the team inside the studio became the 1<sup class="font-features sups">st</sup> game prototype winner at Agate Academy that collaborate with Kampus Merdeka. In the national game hackathon, a game from the studio became the 2<sup class="font-features sups">nd</sup> winner. The last is in Indigo Startup Incubation, the music for As I Began To Dream became the selected game which passed the incubation phase and get Alpha Incubation. Besides making game music, I enjoyed composing instrumental music with the strings element.
+                    <br>
+                    <br>
+                    I am currently a final year student at Universitas Komputer Indonesia pursuing an undergraduate degree, majoring in Informatics Engineering. I am a graduate of Bangkit 2022 in the field of Machine Learning with Google Certification of TensorFlow Developer. I am a leader in the Google Developer Student Clubs at Universitas Komputer Indonesia also Machine Learning Researcher at UNIKOM CodeLabs.
                 </div>
                 <div class="w-full px-4 lg:w-1/2">
-                    <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl lg:pt-10">Let's connect</h3>
-                    <p class="font-medium text-base text-secondary mb-6 lg:text-lg" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus accusantium eius vel consectetur, rerum sequi mollitia illo. Quae.</p>
+                    <h2 class="font-bold text-dark text-3xl mb-5 lg:text-4xl lg:pt-10">Let's connect with me!</h2>
+                    <p class="font-medium text-base text-secondary mb-6 lg:text-lg" >My interests involved composing game music, machine learning, data science, and software engineering. I am seeking exciting opportunities in related fields.
+                    <br>
+                    As a student from Informatics Engineering and member of UNIKOM CodeLabs, I enjoy solving the problems which help me to think out of the box. I also love seeing perspectives and motivating myself which can improve myself to be a better person and help the society.
+                    <br>    
+                    I look forward to implementing and polishing my skills in any opportunity. I receive and would love to connect with you!</p>
                     <div class="flex items-center">
                         <!-- Github -->
                         <a href="https://github.com/wyreinec" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
@@ -98,6 +120,16 @@
                         <a href="https://linkedin.com/in/yohana-sri-rejeki" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
                             <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>LinkedIn</title><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
                         </a>
+
+                        <!-- YouTube -->
+                        <a href="https://www.youtube.com/channel/UCsSXzQOfNqpaLqaFXo_cu2w" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>YouTube</title><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                        </a>
+
+                        <!-- Medium -->
+                        <a href="https://medium.com/@yohanasrirejeki" target="_blank" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Medium</title><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -105,44 +137,314 @@
     </section>
     <!-- About Section end -->
 
+    <!-- Timeline Section Start -->
+    <section id="timeline" class="pb-32 justify-center">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-16">
+                    <h4 class="font-semibold text-lg text-primary mb-2">Timeline of</h4>
+                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Education and Experiences</h2>
+                    <p class="font-medium text-md text-secondary md:text-lg">Yohana Sri Rejeki's projects related with Game Music Composing, Data and Machine Learning, and UI Design</p>
+                </div>
+            </div>
+            <div class="max-w-7xl mx-auto w-full grid grid-cols-9 px-2">
+                <!-- Stack 1 -->
+                <div class="col-span-4 w-full h-full ">
+                    <div class="w-full h-full text-black transition ease-in-out delay-150 bg-gradient-to-r shadow-md from-white-400 to-white-100 rounded-md p-2 md:pl-4 hover:from-blue-400 hover:text-black hover:scale-110">
+                        <h4 class="text-xs text-black"> October 2019 - Present</h4>
+                        <h1 class="font-bold text-xl"><a href="https://www.unikom.ac.id/">Universitas Komputer Indonesia</a></h1>
+                        <h2 class="">Bachelor's Degree of Informatics Engineering</h2>
+                    </div>
+                </div>
+                <div class="relative col-span-1 w-full h-full flex justify-center items-center">
+                    <div class="h-full w-1 bg-indigo-300"></div>
+                    <div class="absolute w-6 h-6 rounded-full bg-indigo-800 z-10 text-white text-center">1</div>
+                </div>
+                <div class="col-span-4 w-full h-full"></div>
+        
+        
+                <!-- Stack 2 -->
+                <div class="col-span-4 w-full h-full"></div>
+                <div class="relative col-span-1 w-full h-full flex justify-center items-center">
+                    <div class="h-full w-1 bg-indigo-300"></div>
+                    <div class="absolute w-6 h-6 rounded-full bg-indigo-800 z-10 text-white text-center">2</div>
+                </div>
+                <div class="col-span-4 w-full h-full text-right ">
+                    <div class="w-full h-full text-black transition ease-in-out delay-150 bg-gradient-to-l shadow-md from-white-400 to-white-100 rounded-md p-2 md:pl-4 hover:from-blue-400 hover:text-black hover:scale-110">
+                        <h4 class="text-xs text-black">February 2022 - July 2022</h4>
+                        <h1 class="font-bold text-xl"><a href="https://gdsc.community.dev/universitas-komputer-indonesia/">Google Developer Student Clubs - UNIKOM</a></h1>
+                        <h2 class="">Member of Front-End Developer</h2>
+                    </div>
+                </div>
+        
+                <!-- Stack 3 -->
+                <div class="col-span-4 w-full h-full ">
+                    <div class="w-full h-full text-black transition ease-in-out delay-150 bg-gradient-to-r shadow-md from-white-400 to-white-100 rounded-md p-2 md:pl-4 hover:from-blue-400 hover:text-black hover:scale-110">
+                        <h4 class="text-xs text-black">February 2022 - July 2022</h4>
+                        <h1 class="font-bold text-xl"><a href="https://grow.google/intl/id_id/bangkit/?tab=machine-learning">Bangkit Academy led by Google, Tokopedia, Gojek, & Traveloka</a></h1>
+                        <h2 class="">Student of Machine Learning</h2>
+                    </div>
+                </div>
+                <div class="relative col-span-1 w-full h-full flex justify-center items-center">
+                    <div class="h-full w-1 bg-indigo-300"></div>
+                    <div class="absolute w-6 h-6 rounded-full bg-indigo-800 z-10 text-white text-center">3</div>
+                </div>
+                <div class="col-span-4 w-full h-full"></div>
+
+                <!-- Stack 4 -->
+                <div class="col-span-4 w-full h-full"></div>
+                <div class="relative col-span-1 w-full h-full flex justify-center items-center">
+                    <div class="h-full w-1 bg-indigo-300"></div>
+                    <div class="absolute w-6 h-6 rounded-full bg-indigo-800 z-10 text-white text-center">4</div>
+                </div>
+                <div class="col-span-4 w-full h-full text-right ">
+                    <div class="w-full h-full text-black transition ease-in-out delay-150 bg-gradient-to-l shadow-md from-white-400 to-white-100 rounded-md p-2 md:pl-4 hover:from-blue-400 hover:text-black hover:scale-110">
+                        <h4 class="text-xs text-black">July 2021 - Present</h4>
+                        <h1 class="font-bold text-xl"><a href="https://codelabs.unikom.ac.id/">UNIKOM CodeLabs</a></h1>
+                        <h2 class="">Game Composer, Sound Engineer, Machine Learning Researcher, and Speaker</h2>
+                    </div>
+                </div>
+
+                <!-- Stack 5 -->
+                <div class="col-span-4 w-full h-full ">
+                    <div class="w-full h-full text-black transition ease-in-out delay-150 bg-gradient-to-r shadow-md from-white-400 to-white-100 rounded-md p-2 md:pl-4 hover:from-blue-400 hover:text-black hover:scale-110">
+                        <h4 class="text-xs text-black">August 2021 - September 2022</h4>
+                        <h1 class="font-bold text-xl"><a href="https://gdsc.community.dev/universitas-komputer-indonesia/">Google Developer Student Clubs - UNIKOM</a></h1>
+                        <h2 class="">Head of Social Media</h2>
+                    </div>
+                </div>
+                <div class="relative col-span-1 w-full h-full flex justify-center items-center">
+                    <div class="h-full w-1 bg-indigo-300"></div>
+                    <div class="absolute w-6 h-6 rounded-full bg-indigo-800 z-10 text-white text-center">5</div>
+                </div>
+                <div class="col-span-4 w-full h-full"></div>
+
+                <!-- Stack 6 -->
+                <div class="col-span-4 w-full h-full"></div>
+                <div class="relative col-span-1 w-full h-full flex justify-center items-center">
+                    <div class="h-full w-1 bg-indigo-300"></div>
+                    <div class="absolute w-6 h-6 rounded-full bg-indigo-800 z-10 text-white text-center">6</div>
+                </div>
+                <div class="col-span-4 w-full h-full text-right ">
+                    <div class="w-full h-full text-black transition ease-in-out delay-150 bg-gradient-to-l shadow-md from-white-400 to-white-100 rounded-md p-2 md:pl-4 hover:from-blue-400 hover:text-black hover:scale-110">
+                        <h4 class="text-xs text-black">December 2021 - Present</h4>
+                        <h1 class="font-bold text-xl"><a href="https://strayflux.itch.io/">Strayflux Game Studio</a></h1>
+                        <h2 class="">Game Composer</h2>
+                    </div>
+                </div>
+
+                <!-- Stack 7 -->
+                <div class="col-span-4 w-full h-full ">
+                    <div class="w-full h-full text-black transition ease-in-out delay-150 bg-gradient-to-r shadow-md from-white-400 to-white-100 rounded-md p-2 md:pl-4 hover:from-blue-400 hover:text-black hover:scale-110">
+                        <h4 class="text-xs text-black">June 2022 - December 2022</h4>
+                        <h1 class="font-bold text-xl"><a href="https://game.indigo.id/">Indigo Game Startup Incubation</a></h1>
+                        <h2 class="">Game Composer from Strayflux Game Studio</h2>
+                    </div>
+                </div>
+                <div class="relative col-span-1 w-full h-full flex justify-center items-center">
+                    <div class="h-full w-1 bg-indigo-300"></div>
+                    <div class="absolute w-6 h-6 rounded-full bg-indigo-800 z-10 text-white text-center">7</div>
+                </div>
+                <div class="col-span-4 w-full h-full"></div>
+
+                <!-- Stack 8 -->
+                <div class="col-span-4 w-full h-full"></div>
+                <div class="relative col-span-1 w-full h-full flex justify-center items-center">
+                    <div class="h-full w-1 bg-indigo-300"></div>
+                    <div class="absolute w-6 h-6 rounded-full bg-indigo-800 z-10 text-white text-center">8</div>
+                </div>
+                <div class="col-span-4 w-full h-full text-right ">
+                    <div class="w-full h-full text-black transition ease-in-out delay-150 bg-gradient-to-l shadow-md from-white-400 to-white-100 rounded-md p-2 md:pl-4 hover:from-blue-400 hover:text-black hover:scale-110">
+                        <h4 class="text-xs text-black">September 2022 - Present</h4>
+                        <h1 class="font-bold text-xl"><a href="https://developers.google.com/womentechmakers">Women Techmakers</a></h1>
+                        <h2 class="">Member</h2>
+                    </div>
+                </div>
+
+                <!-- Stack 9 -->
+                <div class="col-span-4 w-full h-full ">
+                    <div class="w-full h-full text-black transition ease-in-out delay-150 bg-gradient-to-r shadow-md from-white-400 to-white-100 rounded-md p-2 md:pl-4 hover:from-blue-400 hover:text-black hover:scale-110">
+                        <h4 class="text-xs text-black">June 2022 - December 2022</h4>
+                        <h1 class="font-bold text-xl"><a href="https://game.indigo.id/">Google Developer Student Clubs - UNIKOM</a></h1>
+                        <h2 class="">Lead</h2>
+                    </div>
+                </div>
+                <div class="relative col-span-1 w-full h-full flex justify-center items-center">
+                    <div class="h-full w-1 bg-indigo-300"></div>
+                    <div class="absolute w-6 h-6 rounded-full bg-indigo-800 z-10 text-white text-center">9</div>
+                </div>
+                <div class="col-span-4 w-full h-full"></div>
+                
+            </div>
+        </div>
+    </section>
+    <!-- Timeline Section end -->
+
+    <!-- Achievements Section Start -->
+    <section id="achievements" class="pb-20 justify-center">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-16">
+                    <h4 class="font-semibold text-lg text-primary mb-2">Achievements</h4>
+                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Honors and Awards</h2>
+                    <p class="font-medium text-md text-secondary md:text-lg">Yohana Sri Rejeki's achievements in the last 2 years</p>
+                </div>
+            </div>
+            <div class="flex overflow-x-scroll md:overflow-x-visible pb-10 hide-scroll-bar">
+                <div class="flex flex-nowrap lg:ml-10 md:ml-10 ml-50 ">
+                <div class="inline-block px-3">
+                    <div class="w-70 h-70 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                        <img class="w-full" src="/dist/img/portfolio/Innoserve21.png" alt="Finalist Innoserve Award 2021">
+                        <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">Finalist Innoserve Award 2021</div>
+                            <p class="text-gray-700 text-base">
+                            Taiwan
+                            </p>
+                        </div>
+                        <div class="px-6 pt-4 pb-2">
+                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#international</span>
+                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#speaker</span>
+                            <p class="text-white text-base px-2 py-1 mr-2 mb-1">.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline-block px-3">
+                    <div class="w-70 h-70 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                        <img class="w-full" src="/dist/img/portfolio/APICTA21.png" alt="Finalist APICTA Award 2021 (Inclusion - General)">
+                        <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">Finalist APICTA Award 2021 (Inclusion - General)</div>
+                            <p class="text-gray-700 text-base">
+                            Malaysia
+                            </p>
+                        </div>
+                        <div class="px-6 pt-4 pb-2">
+                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#international</span>
+                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#speaker</span>
+                            <p class="text-white text-base px-2 py-1 mr-2 mb-1">.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline-block px-3">
+                    <div class="w-70 h-70 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                        <img class="w-full" src="/dist/img/portfolio/MVH.png" alt="Finalist Microsoft Virtual Hackathon 2022">
+                        <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">
+                            Finalist Microsoft Virtual Hackathon 2022</div>
+                            <p class="text-white text-base">
+                            asdasd
+                            </p>
+                        </div>
+                        <div class="px-6 pt-4 pb-2">
+                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#international</span>
+                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#MLEngineer</span>
+                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Speaker</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="inline-block px-3">
+                    <div class="w-70 h-70 max-w-xs overflow-hidden rounded-lg shadow-md bg-white hover:shadow-xl transition-shadow duration-300 ease-in-out">
+                        <img class="w-full" src="/dist/img/portfolio/Innoserve22.png" alt="Finalist Innoserve Award 2022">
+                        <div class="px-6 py-4">
+                        <div class="font-bold text-xl mb-2">Finalist Innoserve Award 2022</div>
+                            <p class="text-gray-700 text-base">
+                            Taiwan
+                            </p>
+                        </div>  
+                        <div class="px-6 pt-4 pb-2">
+                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#international</span>
+                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#MLEngineer</span>
+                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">#Speaker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Achievements Section end -->
+
     <!-- Portfolio Section Start -->
     <section id="portfolio" class="pt-36 pb-16 bg-slate-100">
         <div class="container">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-16">
                     <h4 class="font-semibold text-lg text-primary mb-2">Portfolio</h4>
-                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Project Terbaru</h2>
-                    <p class="font-medium text-md text-secondary md:text-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis repudiandae nisi, molestiae fugiat quos aperiam. Rem porro modi labore incidunt.</p>
+                    <h2 class="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">New Projects</h2>
+                    <p class="font-medium text-md text-secondary md:text-lg">Yohana Sri Rejeki's projects related with Game Music Composing, Data and Machine Learning, and UI Design</p>
                 </div>
             </div>
             <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
                 <div class="mb-12 p-4 md:w-1/2">
                    <div class="rounded-md shadow-md overflow-hidden">
-                       <img src="dist/img/portfolio/1.png" alt="Landing Page" width="w-full" />
+                       <img src="dist/img/portfolio/01_As I Began To Dream.png" alt="As I Began To Dream" width="w-full" />
                    </div>
-                   <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Yohana Sri Rejeki's Landing Page</h3>
-                   <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. At ad labore id.</p>
+                   <h4 class="font-semibold text-xl text-dark mt-5 mb-3"> <a href="https://strayflux.itch.io/aibtd">
+                    As I Began To Dream</a></h4>
+                   <p class="font-medium text-base text-secondary">2D Puzzle Platformer game where players will play as Lily a little girl trapped in her dream world.
+
+                    Lily can control the environment around her using the mysterious power she has. Using Lily's powers, solve the various challenges she faces on her journey to find a way out of her never-ending dream world.</p>
                 </div>
                 <div class="mb-12 p-4 md:w-1/2">
                    <div class="rounded-md shadow-md overflow-hidden">
-                       <img src="dist/img/portfolio/2.png" alt="Landing Page" width="w-full" />
+                       <img src="dist/img/portfolio/02_Tori.png" alt="Tori" width="w-full" />
                    </div>
-                   <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Yohana Sri Rejeki's Landing Page</h3>
-                   <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. At ad labore id.</p>
+                   <h4 class="font-semibold text-xl text-dark mt-5 mb-3"><a href="https://reikifalls.itch.io/tori">Tori</a></h4>
+                   <p class="font-medium text-base text-secondary">Enhance Tori's body with superpower injection and help Tori escape from an underground experimental site created by Dr. Eddy. But, remember every power comes with a cost!</p>
                 </div>
                 <div class="mb-12 p-4 md:w-1/2">
                    <div class="rounded-md shadow-md overflow-hidden">
-                       <img src="dist/img/portfolio/3.png" alt="Landing Page" width="w-full" />
+                       <img src="dist/img/portfolio/03_PneuX.png" alt="PneuX" width="w-full" />
                    </div>
-                   <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Yohana Sri Rejeki's Landing Page</h3>
-                   <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. At ad labore id.</p>
+                   <h4 class="font-semibold text-xl text-dark mt-5 mb-3"><a href="https://github.com/wyreinec/PneuX">PneuX</a></h4>
+                   <p class="font-medium text-base text-secondary">First prediction of pneumonia based on rontgen picture.</p>
                 </div>
                 <div class="mb-12 p-4 md:w-1/2">
                    <div class="rounded-md shadow-md overflow-hidden">
-                       <img src="dist/img/portfolio/4.png" alt="Landing Page" width="w-full" />
+                       <img src="dist/img/portfolio/04_My Shield.png" alt="My Shield" width="w-full" />
                    </div>
-                   <h3 class="font-semibold text-xl text-dark mt-5 mb-3">Yohana Sri Rejeki's Landing Page</h3>
-                   <p class="font-medium text-base text-secondary">Lorem ipsum dolor sit amet consectetur adipisicing elit. At ad labore id.</p>
+                   <h4 class="font-semibold text-xl text-dark mt-5 mb-3">My Shield</h4>
+                   <p class="font-medium text-base text-secondary">Social Distancing App during Covid-19</p>
+                </div>
+                <div class="mb-12 p-4 md:w-1/2">
+                   <div class="rounded-md shadow-md overflow-hidden">
+                       <img src="dist/img/portfolio/05_Neko Pazuru.png" alt="Neko Pazuru" width="w-full" />
+                   </div>
+                   <h4 class="font-semibold text-xl text-dark mt-5 mb-3"><a href="https://reikifalls.itch.io/neko-pazuru">Neko Pazuru</a></h4>
+                   <p class="font-medium text-base text-secondary">Project Kawai Neko is aimed at cat lovers around the world. This game is a puzzle genre where the player must save a kitten from danger by using the mechanics provided in the game. Such as providing a bridge, guarding it from wild animals and others. Art design that is very cute and adorable to look at will make players feel happy and can enjoy this game.</p>
+                </div>
+                <div class="mb-12 p-4 md:w-1/2">
+                   <div class="rounded-md shadow-md overflow-hidden">
+                       <img src="dist/img/portfolio/06_Sambara.png" alt="Sambara" width="w-full" />
+                   </div>
+                   <h4 class="font-semibold text-xl text-dark mt-5 mb-3">Sambara</h4>
+                   <p class="font-medium text-base text-secondary">Redesign App in the Software Engineering Course. Sambara is an App made by BAPPENDA West Java for checking vechicle tax in West Java.</p>
+                </div>
+                <div class="mb-12 p-4 md:w-1/2">
+                   <div class="rounded-md shadow-md overflow-hidden">
+                       <img src="dist/img/portfolio/07_Diabetes Detection.png" alt="Diabetes Detection" width="w-full" />
+                   </div>
+                   <h4 class="font-semibold text-xl text-dark mt-5 mb-3">Diabetes Detection</h4>
+                   <p class="font-medium text-base text-secondary">Predict whether you have diabetes or not using this app.</p>
+                </div>
+                <div class="mb-12 p-4 md:w-1/2">
+                   <div class="rounded-md shadow-md overflow-hidden">
+                       <img src="dist/img/portfolio/08_Swafoody.png" alt="Swafoody" width="w-full" />
+                   </div>
+                   <h4 class="font-semibold text-xl text-dark mt-5 mb-3">Swafoody</h4>
+                   <p class="font-medium text-base text-secondary">Swafoody is a smart application that can help you to provide the recipe by recognize the ingredients by uploading them.</p>
+                </div>
+                <div class="mb-12 p-4 md:w-1/2">
+                   <div class="rounded-md shadow-md overflow-hidden">
+                       <img src="dist/img/portfolio/09_Dimension Shifter.png" alt="Dimension Shifter" width="w-full" />
+                   </div>
+                   <h4 class="font-semibold text-xl text-dark mt-5 mb-3"><a href="https://mdlaras.itch.io/dimension-shifter">Dimension Shifter</a></h4>
+                   <p class="font-medium text-base text-secondary">2D Platformer Game in Pixel Art style - There is a dimensional break! You are a dimensional shifter who can fix it all. Complete challenges and collect Dimensional Shards to unlock all dimension. With the interesting mechanics and Pixel Art style this game will immerse you in the Dimension Realm.</p>
+                </div>
+                <div class="mb-12 p-4 md:w-1/2">
+                   <div class="rounded-md shadow-md overflow-hidden">
+                       <img src="dist/img/portfolio/10_Personal Website.png" alt="Yohana's Personal Website" width="w-full" />
+                   </div>
+                   <h4 class="font-semibold text-xl text-dark mt-5 mb-3">Yohana Sri Rejeki's Personal Website</h4>
+                   <p class="font-medium text-base text-secondary">Know more about Yohana, see the projects she made, and connect with her!</p>
                 </div>
             </div>
         </div>
@@ -189,5 +491,12 @@
     </footer>
     <!-- Footer End -->
     <script src="dist/js/script.js"></script>
+
+    <!-- Back to Top -->
+    <a href="#home" class="fixed justify-center items-center bottom-4 right-4 z-[9999] h-14 w-14 rounded-full bg-indigo-500 p-4 hover:animate-pulse hidden" id="to-top">
+        <span class="block h-5 w-5 rotate-45 border-t-2 border-l-2 mt-2"></span>
+    </a>
+    <!-- Back to Top -->
+    
 </body>
 </html>
