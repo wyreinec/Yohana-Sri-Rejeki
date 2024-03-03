@@ -8,9 +8,9 @@ const scrollHeader = () =>{
 window.addEventListener('scroll', scrollHeader)
 
 /*=============== SERVICES MODAL ===============*/
-const modalViews = document.querySelectorAll('.services__modal'),
-      modalBtns = document.querySelectorAll('.services__button'),
-      modalClose = document.querySelectorAll('.services__modal-close')
+const modalViews = document.querySelectorAll('.achievements__modal'),
+      modalBtns = document.querySelectorAll('.achievements__button'),
+      modalClose = document.querySelectorAll('.achievements__modal-close')
       
 let modal = function(modalClick) {
     modalViews[modalClick].classList.add('active-modal')
@@ -51,10 +51,17 @@ function activeWork() {
 linkWork.forEach(l => l.addEventListener('click', activeWork))
 
 /*=============== SWIPER TESTIMONIAL ===============*/
-let swiperTestimonial = new Swiper(".testimonial__container", {
+let swiperTestimonial = new Swiper(".timeline__container", {
     spaceBetween: 24,
     loop: true,
     grapCursor: true,
+    autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+    },
+
+    effect: 'slide',
+    speed: 800,
 
     pagination: {
         el: ".swiper-pagination",
@@ -66,7 +73,7 @@ let swiperTestimonial = new Swiper(".testimonial__container", {
             slidesPerView: 2,
         },
         768: {
-            slidesPerView: 2,
+            slidesPerView:2,
             spaceBetween: 48,
         },
     },
@@ -123,4 +130,29 @@ themeButton.addEventListener('click', () => {
 })
 
 /*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal ({
+    origin: 'top',
+    distance: '60px',
+    duration: 2500,
+    delay: 400,
+    reset: true
+})
+
+sr.reveal(`.home__data`)
+sr.reveal(`.home__handle`, {delay: 700})
+sr.reveal(`.home__social, .home__scroll`, {delay: 900, origin: 'bottom'})
+sr.reveal(`.section__subtitle:not(.no-animation), .section__title:not(.no-animation)`, {delay: 900});
+sr.reveal(`.about__img`, {delay: 700, origin: 'left'})
+sr.reveal(`.about__data`, {delay: 700, origin: 'right'})
+sr.reveal(`.skills__content`, {delay: 700, origin: 'bottom'})
+sr.reveal(`.achievements__card`, {delay: 700, origin: 'bottom'})
+sr.reveal(`.achievements__card`, {delay: 700, origin: 'bottom'})
+sr.reveal('.work__item:nth-child(1)', { delay: 200 });
+sr.reveal('.work__item:nth-child(2)', { delay: 400 });
+sr.reveal('.work__item:nth-child(3)', { delay: 600 });
+sr.reveal('.work__item:nth-child(4)', { delay: 800 });
+sr.reveal('.work__item:nth-child(5)', { delay: 1000 });
+sr.reveal(`.work__card`, {delay: 700, origin: 'bottom'})
+sr.reveal(`.contact__content:not(.no-animation)`, {delay: 700, origin: 'bottom'})
+
 
