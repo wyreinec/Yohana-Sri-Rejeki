@@ -574,7 +574,7 @@ body.light-theme {
 }
 
 .achievements__subtitle {
-  font-size: var(--h4-font-size);
+  font-size: 10px;
 }
 
 .achievements__title {
@@ -967,6 +967,10 @@ body.light-theme {
     font-size: var(--small-font-size);
   }
 
+  .achievements__subtitle {
+    font-size: 15px;
+  }
+
   /* .achievements__card {
     padding: 2rem 1.5rem 1.5rem;
   } */
@@ -1033,6 +1037,9 @@ body.light-theme {
     padding: 4.5rem 2.5rem 2.5rem;
   }
 
+  .achievements__subtitle {
+    font-size: 10px;
+  }
   /* .center-modal {
     position: fixed;
     top: 50%;
@@ -1080,6 +1087,10 @@ body.light-theme {
 @media screen and (min-width: 767px) {
   .work__container {
     grid-template-columns: repeat(2, max-content);
+  }
+
+  .achievements__subtitle {
+    font-size: 10px;
   }
 
   /* .contact__container {
@@ -1187,6 +1198,11 @@ body.light-theme {
 
   .achievements__card {
     padding: 3rem 1.5rem 1.5rem;
+  }
+
+
+  .achievements__subtitle {
+    font-size: 13px;
   }
 
   /* .achievements__model-title,
