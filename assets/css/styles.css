@@ -14,7 +14,7 @@
         Pink: hsl(356, 66%, 75%)
         Teal: hsl(174, 63%, 62%)
   */
-  --first-hue: 250;
+  --first-hue: 707;
   --sat: 66%;
   --lig: 75%;
   --second-hue: 219;
@@ -569,11 +569,11 @@ body.light-theme {
 
 .achievements__card {
   background-color: var(--container-color);
-  padding: 1.5rem 1.5rem 1.5rem;
+  padding: 3rem 1.5rem 1.5rem;
   border-radius: 1rem;
 }
 
-.service__subtitle {
+.achievements__subtitle {
   font-size: var(--h4-font-size);
 }
 
@@ -592,7 +592,7 @@ body.light-theme {
 }
 
 .achievements__button:hover .achievements__icon {
-  transform: translate(.25rem);
+  transform: translateX(.25rem);
 }
 
 .achievements__icon {
@@ -613,6 +613,12 @@ body.light-theme {
   opacity: 0;
   transition: .4s;
   z-index: var(--z-modal);
+  /* top: 50%; */
+  /* left: 50%; */
+  /* max-width: 80%; Adjust as needed */
+  /* width: 100%; */
+  /* max-height: 80vh; Adjust as needed */
+  /* overflow-y: auto; */
 }
 
 .achievements__modal-content {
@@ -965,8 +971,13 @@ body.light-theme {
     padding: 2rem 1.5rem 1.5rem;
   } */
 
+  /* .achievements__modal-content {
+    width: 500px;
+    padding: 4.5rem 2.5rem 2.5rem;
+  } */
+  
   .achievements__container {
-    grid-template-columns: 545px;
+    grid-template-columns: 145px;
     justify-content: center;
   }
 
@@ -1022,6 +1033,17 @@ body.light-theme {
     padding: 4.5rem 2.5rem 2.5rem;
   }
 
+  /* .center-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 80%; /* Adjust as needed */
+    /* width: 100%; */
+    /* max-height: 80vh; Adjust as needed */
+    /* overflow-y: auto; */
+  /* } */ 
+
   .achievements__modal-description {
     padding: 0 3.5rem;
   }
@@ -1067,7 +1089,7 @@ body.light-theme {
   } */
 }
 /* For large devices */
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .container {
     margin-left: auto;
     margin-right: auto;
@@ -1159,18 +1181,18 @@ body.light-theme {
   }
 
   .achievements__container {
-    grid-template-columns: repeat(2,392px);
+    grid-template-columns: repeat(2, 392px);
     column-gap: 3rem;
   }
 
   .achievements__card {
-    padding: 2rem 1.5rem 1.5rem;
+    padding: 3rem 1.5rem 1.5rem;
   }
 
-  .achievements__model-title,
+  /* .achievements__model-title,
   .achievements__modal-description {
     text-align: center;
-  }
+  } */
 
   .work__container {
     gap: 3rem;
