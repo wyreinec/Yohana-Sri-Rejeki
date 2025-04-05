@@ -145,7 +145,7 @@ sr.reveal(`.about__img`, {distance: '40px',origin: 'bottom',opacity: 0,duration:
 sr.reveal('.about__description', {distance: '20px',origin: 'bottom',opacity: 0,duration: 1000,easing: 'ease',delay: 400});
 sr.reveal('.about__img', {scale: 0.95,opacity: 0,duration: 1000,delay: 100,easing: 'ease-in-out'});
 sr.reveal('.section__title, .section__subtitle', {distance: '20px',origin: 'top',opacity: 0,duration: 800,interval: 100,easing: 'ease-out'});
-sr.reveal(`.about__box, .skills__content, .contact__content`, {delay: 200, distance: '40px', origin: 'bottom', duration: 800, easing: 'ease-out', interval: 200})
+sr.reveal(`.about__box, .skills__content`, {delay: 200, distance: '40px', origin: 'bottom', duration: 800, easing: 'ease-out', interval: 200})
 sr.reveal('.timeline__dot', {scale: 0.8,opacity: 0,duration: 800,easing: 'ease-in-out',interval: 200,delay: 100});
 sr.reveal('.timeline__item', {distance: '30px',origin: 'bottom',opacity: 0,duration: 1000,easing: 'ease-in-out', interval: 200});
 // sr.reveal(`.achievements__modal:not(.no-animation)`, {delay: 700, origin: 'bottom'})
