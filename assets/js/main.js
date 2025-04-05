@@ -10,25 +10,25 @@ window.addEventListener('scroll', scrollHeader)
 /*=============== SERVICES MODAL ===============*/
 const modalViews = document.querySelectorAll('.achievements__modal'),
       modalBtns = document.querySelectorAll('.achievements__button'),
-      modalClose = document.querySelectorAll('.achievements__modal-close')
-      
+      modalCloses = document.querySelectorAll('.achievements__modal-close');
+
 let modal = function(modalClick) {
-    modalViews[modalClick].classList.add('active-modal')
+    modalViews[modalClick].classList.add('active-modal');
 }
 
-modalBtns.forEach((mb, i) => {
-    mb.addEventListener('click', () => {
-        modal(i)
-    })
-})
+modalBtns.forEach((btn, i) => {
+    btn.addEventListener('click', () => {
+        modal(i);
+    });
+});
 
-modalClose.forEach((mc) => {
-    mc.addEventListener('click', () => {
-        modalViews.forEach((mv) => {
-            mv.classList.remove('active-modal')
-        })
-    })
-})
+modalCloses.forEach((close) => {
+    close.addEventListener('click', () => {
+        modalViews.forEach((modalView) => {
+            modalView.classList.remove('active-modal');
+        });
+    });
+});
 
 /*=============== MIXITUP FILTER PORTFOLIO ===============*/
 let mixerPortfolio = mixitup('.work__container', {
@@ -141,18 +141,29 @@ const sr = ScrollReveal ({
 sr.reveal(`.home__data`)
 sr.reveal(`.home__handle`, {delay: 700})
 sr.reveal(`.home__social, .home__scroll`, {delay: 900, origin: 'bottom'})
-sr.reveal(`.section__subtitle:not(.no-animation), .section__title:not(.no-animation)`, {delay: 900});
-sr.reveal(`.about__img`, {delay: 700, origin: 'left'})
-sr.reveal(`.about__data`, {delay: 700, origin: 'right'})
-sr.reveal(`.skills__content`, {delay: 700, origin: 'bottom'})
-sr.reveal(`.achievements__card`, {delay: 700, origin: 'bottom'})
-sr.reveal(`.achievements__card`, {delay: 700, origin: 'bottom'})
-sr.reveal('.work__item:nth-child(1)', { delay: 200 });
-sr.reveal('.work__item:nth-child(2)', { delay: 400 });
-sr.reveal('.work__item:nth-child(3)', { delay: 600 });
-sr.reveal('.work__item:nth-child(4)', { delay: 800 });
-sr.reveal('.work__item:nth-child(5)', { delay: 1000 });
-sr.reveal(`.work__card`, {delay: 700, origin: 'bottom'})
-sr.reveal(`.contact__content:not(.no-animation)`, {delay: 700, origin: 'bottom'})
+sr.reveal(`.about__img`, {distance: '40px',origin: 'bottom',opacity: 0,duration: 1000,easing: 'ease',delay: 200})
+sr.reveal('.about__description', {distance: '20px',origin: 'bottom',opacity: 0,duration: 1000,easing: 'ease',delay: 400});
+sr.reveal('.about__img', {scale: 0.95,opacity: 0,duration: 1000,delay: 100,easing: 'ease-in-out'});
+sr.reveal('.section__title, .section__subtitle', {distance: '20px',origin: 'top',opacity: 0,duration: 800,interval: 100,easing: 'ease-out'});
+sr.reveal(`.about__box, .skills__content, .contact__content`, {delay: 200, distance: '40px', origin: 'bottom', duration: 800, easing: 'ease-out', interval: 200})
+sr.reveal('.timeline__dot', {scale: 0.8,opacity: 0,duration: 800,easing: 'ease-in-out',interval: 200,delay: 100});
+sr.reveal('.timeline__item', {distance: '30px',origin: 'bottom',opacity: 0,duration: 1000,easing: 'ease-in-out', interval: 200});
+// sr.reveal(`.achievements__modal:not(.no-animation)`, {delay: 700, origin: 'bottom'})
+  
+
+  
+// sr.reveal(`.about__data`, {delay: 700, origin: 'right'})
+// sr.reveal(`.skills__content`, {delay: 700, origin: 'bottom'})
+// sr.reveal(`.achievements__card`, {delay: 700, origin: 'bottom'})
+// sr.reveal(`.achievements__card`, {delay: 700, origin: 'bottom'})
+// sr.reveal('.work__item:nth-child(1)', { delay: 200 });
+// sr.reveal('.work__item:nth-child(2)', { delay: 400 });
+// sr.reveal('.work__item:nth-child(3)', { delay: 600 });
+// sr.reveal('.work__item:nth-child(4)', { delay: 800 });
+// sr.reveal('.work__item:nth-child(5)', { delay: 1000 });
+// sr.reveal(`.work__card`, {delay: 700, origin: 'bottom'})
+// sr.reveal(`.contact__content:not(.no-animation)`, {delay: 700, origin: 'bottom'})
+
+
 
 

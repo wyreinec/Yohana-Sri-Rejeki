@@ -212,9 +212,12 @@ body.light-theme {
 
 .container {
   max-width: 968px;
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
+
 
 .grid {
   display: grid;
@@ -470,6 +473,12 @@ body.light-theme {
   width: 220px;
   border-radius: 1.5rem;
   justify-self: center;
+  transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.about__img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
 }
 
 .about__data {
@@ -626,6 +635,7 @@ body.light-theme {
   background-color: var(--body-color);
   padding: 4.5rem 1.5rem 2.5rem;
   border-radius: 1.5rem;
+  align-items: center;
 }
 
 .achievements__modal-title,
@@ -729,12 +739,19 @@ body.light-theme {
 }
 
 .work__button {
-  width: max-content;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.25rem;
+  cursor: pointer;
   color: var(--first-color);
   font-size: var(--small-font-size);
+  margin-left: auto;
+  margin-top: 1rem;
+}
+
+.button-align-right {
   display: flex;
-  align-items: center;
-  column-gap: .25rem;
+  justify-content: flex-end;
 }
 
 .work__button:hover .work__icon {
@@ -752,51 +769,92 @@ body.light-theme {
   color: var(--body-color);
 }
 
-/*=============== TESTIMONIAL ===============*/
-.timeline__card {
-  background-color: var(--container-color);
-  padding: 1.25rem 1.5rem;
-  border-radius: 1.5rem;
-  margin-bottom: 3rem;
+/*=============== TIMELINE ===============*/
+.timeline__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-content: space-between;
+  gap: 3rem;
+  padding: 2rem 2rem;
+
+  max-width: 950px; /* <-- samain kayak section atas */
+  margin: 0 auto;     /* <-- biar ke tengah */
+  flex-wrap: wrap;
 }
 
-.timeline__img {
-  width: 60px;
-  border-radius: 3rem;
-  margin-bottom: 1rem;
+.timeline__column {
+  flex: 1;
+  min-width: 200px;
 }
 
-.timeline__name {
-  font-size: var(--normal-font-size);
+.timeline__title {
+  font-size: 1rem;
   font-weight: var(--font-medium);
-  margin-bottom: .25rem;
-}
-
-.timeline__description {
-  font-size: var(--small-font-size);
+  margin-bottom: 1.5rem;
+  position: relative;
 
 }
 
-/* .timeline__container {
-  width: 1000px;
-} */
-
-.timeline__card {
-  padding: 1.5rem 2rem;
-  height: 300px;
+.timeline__item {
+  position: relative;
+  padding-left: 2rem;
+  margin-bottom: 2rem;
+  /* HAPUS border-left-nya */
 }
 
-.swiper-pagination {
-  margin-bottom: -10px;
-}
-
-/* Swiper class */
-.swiper-pagination-bullet {
-  background-color: var(--text-color-light);
-}
-
-.swiper-pagination-bullet-active {
+.timeline__item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -2px;
+  width: 2px;
+  height: 0;
   background-color: var(--first-color);
+  animation: growLine 1s ease forwards;
+}
+
+@keyframes growLine {
+  to {
+    height: 100%;
+  }
+}
+
+.timeline__dot {
+  width: 12px;
+  height: 12px;
+  background-color: #ff8fa3;
+  border-radius: 50%;
+  border: 2px solid white; /* Garis putih tipis */
+  position: absolute;
+  left: -7px;
+  top: 5px;
+  transition: transform 0.3s ease;
+}
+
+.timeline__item:hover .timeline__dot {
+  transform: scale(1.2);
+}
+
+.timeline__role {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.timeline__date {
+  font-size: 0.9rem;
+}
+
+.timeline__content p {
+  margin-top: 0.5rem;
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+}
+
+.timeline__left,
+.timeline__right {
+  flex: 1;
+  min-width:45%; /* biar dua kolom di desktop */
 }
 
 /*=============== CONTACT ===============*/
@@ -971,14 +1029,20 @@ body.light-theme {
     font-size: 15px;
   }
 
+  .achievements__modal-title{
+    text-align: center;
+  }
+
   /* .achievements__card {
     padding: 2rem 1.5rem 1.5rem;
   } */
 
-  /* .achievements__modal-content {
+  .achievements__modal-content {
     width: 500px;
-    padding: 4.5rem 2.5rem 2.5rem;
-  } */
+    padding: 4.5rem 1.5rem 2.5rem;
+    align-items: center;
+    position: relative;
+  }
   
   .achievements__container {
     grid-template-columns: 145px;
@@ -1034,7 +1098,12 @@ body.light-theme {
 
   .achievements__modal-content {
     width: 500px;
-    padding: 4.5rem 2.5rem 2.5rem;
+    padding: 4.5rem 1.5rem 2.5rem;
+    align-items: center;
+  }
+
+  .achievements__modal-title{
+    text-align: center;
   }
 
   .achievements__subtitle {
@@ -1068,14 +1137,14 @@ body.light-theme {
     justify-content: center;
   }
 
-  /* .timeline__container {
-    width: 1000px;
-  } */
+  .timeline__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-  .timeline__card {
+  /* .timeline__card {
     padding: 1.5rem 2rem;
     height: 300px;
-  }
+  } */
 
   .swiper-pagination {
     margin-bottom: -10px;
@@ -1205,10 +1274,9 @@ body.light-theme {
     font-size: 13px;
   }
 
-  /* .achievements__model-title,
-  .achievements__modal-description {
+  .achievements__modal-title{
     text-align: center;
-  } */
+  }
 
   .work__container {
     gap: 3rem;
@@ -1235,13 +1303,13 @@ body.light-theme {
   }
 
   .timeline__container {
-    width: 1000px;
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .timeline__card {
+  /* .timeline__card {
     padding: 1.5rem 2rem;
     height: 330px;
-  }
+  } */
 
   .swiper-pagination {
     margin-bottom: -10px;
@@ -1252,4 +1320,5 @@ body.light-theme {
     padding: .4rem;
     border-radius: .5rem;
   }
+  
 }
